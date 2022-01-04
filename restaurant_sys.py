@@ -4,7 +4,7 @@ from tkinter import *
 import tkinter.font
 import time
 import random
-
+#funtion 
 #-----functions--------------------
 
 def reciept():

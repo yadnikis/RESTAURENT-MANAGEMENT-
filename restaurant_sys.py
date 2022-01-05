@@ -1,11 +1,112 @@
 import sys
 from tkinter import ttk
 from tkinter import * 
-import tkinter.font
+import tkinter.font 
 import time
 import random
-#funtion 
+
 #-----functions--------------------
+def reset():
+    textReceipt.delete(1.0,END)
+    e_dal.set('0')
+    e_roti.set('0')
+    e_fish.set('0')
+    e_chicken.set('0')
+    e_noodles.set('0')
+    e_pizza.set('0')
+    e_dosa.set('0')
+    e_idli.set('0')
+    e_manchurian.set('0')
+
+    e_faluda.set('0')
+    e_fanta.set('0')
+    e_coke.set('0')
+    e_tea.set('0')
+    e_sprite.set('0')
+    e_lemonade.set('0')
+    e_coffee.set('0')
+    e_icetea.set('0')
+    e_moito.set('0')
+
+    e_kitkat.set('0')
+    e_oreo.set('0')
+    e_apple.set('0')
+    e_vanilla.set('0')
+    e_banana.set('0')
+    e_brownie.set('0')
+    e_pineapple.set('0')
+    e_chocolate.set('0')
+    e_blackforest.set('0')
+
+    textroti.config(state=DISABLED)
+    textdal.config(state=DISABLED)
+    textfish.config(state=DISABLED)
+    textchicken.config(state=DISABLED)
+    textnoodles.config(state=DISABLED)
+    textpizza.config(state=DISABLED)
+    textdosa.config(state=DISABLED)
+    textidli.config(state=DISABLED)
+    textmanchurian.config(state=DISABLED)
+
+    textfaluda.config(state=DISABLED)
+    textcoffee.config(state=DISABLED)
+    textfanta.config(state=DISABLED)
+    textcoke.config(state=DISABLED)
+    textcoffee.config(state=DISABLED)
+    textea.config(state=DISABLED)
+    textsprite.config(state=DISABLED)
+    textlemonade.config(state=DISABLED)
+    textmoito.config(state=DISABLED)
+
+    textoreo.config(state=DISABLED)
+    textapple.config(state=DISABLED)
+    textkitkat.config(state=DISABLED)
+    textvanilla.config(state=DISABLED)
+    textbanana.config(state=DISABLED)
+    textbrownie.config(state=DISABLED)
+    textpineapple.config(state=DISABLED)
+    textchocolate.config(state=DISABLED)
+    textblack.config(state=DISABLED)
+
+    var1.set(0)
+    var2.set(0)
+    var3.set(0)
+    var4.set(0)
+    var5.set(0)
+    var6.set(0)
+    var7.set(0)
+    var8.set(0)
+    var9.set(0)
+    var10.set(0)
+    var11.set(0)
+    var12.set(0)
+    var13.set(0)
+    var14.set(0)
+    var15.set(0)
+    var16.set(0)
+    var17.set(0)
+    var18.set(0)
+    var19.set(0)
+    var20.set(0)
+    var21.set(0)
+    var22.set(0)
+    var23.set(0)
+    var24.set(0)
+    var25.set(0)
+    var26.set(0)
+    var27.set(0)
+
+    costofdrinksvar.set('')
+    costoffoodvar.set('')
+    costofcakesvar.set('')
+    subtotalvar.set('')
+    servicetaxvar.set('')
+    totalcostvar.set('')
+
+
+
+
+
 
 def reciept():
     textReceipt.delete(1.0,END)
@@ -17,25 +118,78 @@ def reciept():
     textReceipt.insert(END,'Items:\t\t Cost Of Items(Rs)\n')
     textReceipt.insert(END,'***************************************************************\n')
     if e_roti.get()!='0':
-        textReceipt.insert(END, f'Roti\t\t\t{int(e_roti.get())+10}\n\n')
+        textReceipt.insert(END, f'Roti\t\t\t{int(e_roti.get())*10}\n\n')
     if e_dal.get()!='0':
-        textReceipt.insert(END, f'DAAL\t\t\t{int(e_dal.get())+90}\n\n')
+        textReceipt.insert(END, f'DAAL\t\t\t{int(e_dal.get())*90}\n\n')
     if e_fish.get()!='0':
-        textReceipt.insert(END, f'FISH\t\t\t{int(e_fish.get())+150}\n\n')
+        textReceipt.insert(END, f'FISH\t\t\t{int(e_fish.get())*150}\n\n')
     if e_chicken.get()!='0':
-        textReceipt.insert(END, f'CHICKEN\t\t\t{int(e_chicken.get())+250}\n\n')
+        textReceipt.insert(END, f'CHICKEN\t\t\t{int(e_chicken.get())*250}\n\n')
     if e_noodles.get()!='0':
-        textReceipt.insert(END, f'DAAL\t\t\t{int(e_noodles.get())+150}\n\n')
+        textReceipt.insert(END, f'NOODLES\t\t\t{int(e_noodles.get())*150}\n\n')
     if e_pizza.get()!='0':
-        textReceipt.insert(END, f'DAAL\t\t\t{int(e_pizza.get())+200}\n\n')
+        textReceipt.insert(END, f'PIZZA\t\t\t{int(e_pizza.get())*200}\n\n')
     if e_dosa.get()!='0':
-        textReceipt.insert(END, f'DAAL\t\t\t{int(e_dosa.get())+120}\n\n')
+        textReceipt.insert(END, f'DOSA\t\t\t{int(e_dosa.get())*120}\n\n')
     if e_idli.get()!='0':
-        textReceipt.insert(END, f'DAAL\t\t\t{int(e_idli.get())+100}\n\n')
+        textReceipt.insert(END, f'IDLI\t\t\t{int(e_idli.get())*100}\n\n')
     if e_manchurian.get()!='0':
-        textReceipt.insert(END, f'DAAL\t\t\t{int(e_manchurian.get())+120}\n\n')
+        textReceipt.insert(END, f'MANCHURIAN\t\t\t{int(e_manchurian.get())*120}\n\n')
     
+    if e_faluda.get()!='0':
+        textReceipt.insert(END, f'FALUDA \t\t\t{int(e_faluda.get())*120}\n\n')
+    if e_fanta.get()!='0':
+        textReceipt.insert(END, f'FANTA \t\t\t{int(e_fanta.get())*40}\n\n')
+    if e_coke.get()!='0':
+        textReceipt.insert(END, f'COKE \t\t\t{int(e_coke.get())*80}\n\n')
+    if e_coffee.get()!='0':
+        textReceipt.insert(END, f'COFFEE \t\t\t{int(e_coffee.get())*30}\n\n')
+    if e_tea.get()!='0':
+        textReceipt.insert(END, f'TEA \t\t\t{int(e_tea.get())*40}\n\n')
+    if e_sprite.get()!='0':
+        textReceipt.insert(END, f'SPRITE\t\t\t{int(e_sprite.get())*60}\n\n')
+    if e_lemonade.get()!='0':
+        textReceipt.insert(END, f'LEMONADE\t\t\t{int(e_lemonade.get())*20}\n\n')
+    if e_icetea.get()!='0':
+        textReceipt.insert(END, f'ICETEA\t\t\t{int(e_icetea.get())*50}\n\n')
+    if e_moito.get()!='0':
+        textReceipt.insert(END, f'MOITO\t\t\t{int(e_moito.get())*150}\n\n')
+    
+    if e_oreo.get()!='0':
+        textReceipt.insert(END, f'OREO\t\t\t{int(e_oreo.get())*400}\n\n')
+    if e_apple.get()!='0':
+        textReceipt.insert(END, f'APPLE\t\t\t{int(e_apple.get())*300}\n\n')
+    if e_kitkat.get()!='0':
+        textReceipt.insert(END, f'KITKAT\t\t\t{int(e_kitkat.get())*500}\n\n')
+    if e_vanilla.get()!='0':
+        textReceipt.insert(END, f'VANILLA\t\t\t{int(e_vanilla.get())*550}\n\n')
+    if e_banana.get()!='0':
+        textReceipt.insert(END, f'BANANA\t\t\t{int(e_banana.get())*450}\n\n')
+    if e_brownie.get()!='0':
+        textReceipt.insert(END, f'BROWNIE\t\t\t{int(e_brownie.get())*800}\n\n')
+    if e_pineapple.get()!='0':
+        textReceipt.insert(END, f'PINEAPPLE\t\t\t{int(e_pineapple.get())*620}\n\n')
+    if e_chocolate.get()!='0':
+        textReceipt.insert(END, f'CHOCLATE\t\t\t{int(e_chocolate.get())*700}\n\n')
+    if e_blackforest.get()!='0':
+        textReceipt.insert(END, f'BLACK FOREST\t\t\t{int(e_blackforest.get())*550}\n\n')
+    
+    textReceipt.insert(END, '***************************************************************\n')
+    if costoffoodvar.get()!= '0 Rs':            
+        textReceipt.insert(END,f'Cost of Food\t\t\t{priceofFood}Rs\n\n')
+    if costofdrinksvar.get()!= '0 Rs':
+        textReceipt.insert(END,f'Cost of Drinks\t\t\t{priceofDrinks}Rs\n\n')
+    if costofcakesvar.get()!= '0 Rs':
+        textReceipt.insert(END,f'Cost of Cakes\t\t\t{priceofCakes}Rs\n\n')
+
+    textReceipt.insert(END,f'Sub total \t\t\t{subtotalofItems}Rs\n\n')
+    textReceipt.insert(END,f'Service tax \t\t\t{50}Rs\n\n')
+    textReceipt.insert(END,f'Total Cost \t\t\t{subtotalofItems+50}Rs\n\n')
+    textReceipt.insert(END, '***************************************************************\n')
+
+
 def Totalcost():
+    global priceofFood,priceofDrinks, priceofCakes,subtotalofItems
     item1=int(e_roti.get())
     item2=int(e_dal.get())
     item3=int(e_fish.get())
@@ -685,7 +839,7 @@ textdrink.grid(row=1,column=1,padx=41)
 labelcostofcake = Label(costFrame, text = 'Cost of Cake', font=('arial',16,'bold'), bg='gold', fg='black')
 labelcostofcake.grid(row =2, column=0)
 
-textcake = Entry(costFrame, font=('arial', 18, 'bold'),bd=6, width=14, state='readonly',  textvariable=costofdrinksvar)
+textcake = Entry(costFrame, font=('arial', 18, 'bold'),bd=6, width=14, state='readonly',  textvariable=costofcakesvar)
 textcake.grid(row=2,column=1,padx=41)
 
 labelSubTotal=Label(costFrame,text='Sub Total',font=('arial',16,'bold'),bg='gold',fg='black')
@@ -717,13 +871,7 @@ buttontotal.grid(row=0, column=0)
 buttonreciept = Button(buttonFrame, text = 'Reciept', font=('arial',14,'bold'),bg='gold',fg='black', bd= 3, command=reciept)
 buttonreciept.grid(row=0, column=1)
 
-buttonSave = Button(buttonFrame, text = 'Save', font=('arial',14,'bold'),bg='gold',fg='black', bd= 3)
-buttonSave.grid(row=0, column=2)
-
-buttonSend = Button(buttonFrame, text = 'Send', font=('arial',14,'bold'),bg='gold',fg='black', bd= 3)
-buttonSend.grid(row=0, column=3)
-
-buttonReset = Button(buttonFrame, text = 'Reset', font=('arial',14,'bold'),bg='gold',fg='black', bd= 3)
+buttonReset = Button(buttonFrame, text = 'Reset', font=('arial',14,'bold'),bg='gold',fg='black', bd= 3, command=reset) 
 buttonReset.grid(row=0, column=4)
 
 #text area for reciept

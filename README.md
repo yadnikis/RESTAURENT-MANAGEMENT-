@@ -1,2 +1,2 @@
-# RESTAURENT MANAGEMENT 
+# RESTAURANT MANAGEMENT 
  application using TKINTER in python 
